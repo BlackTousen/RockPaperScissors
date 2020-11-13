@@ -43,41 +43,13 @@ namespace RockPaperScissors
             }
             string cpuAnswer = cpuThrow();
 
-            if (answer == "1" && cpuAnswer == "2")
-            {
-                Console.WriteLine("Rock vs Paper");
-                pointCPU(player, cpu);
-            }
-            else if (answer == "2" && cpuAnswer == "3")
-            {
-                Console.WriteLine("Paper vs Scissors");
-                pointCPU(player, cpu);
-            }
-
-            else if (answer == "3" && cpuAnswer == "1")
-            {
-                Console.WriteLine("Scissors vs Rock");
-                pointCPU(player, cpu);
-            }
-
-            else if (cpuAnswer == "1" && answer == "2")
-            {
-                Console.WriteLine("Paper vs Rock");
-                pointPlayer(player, cpu);
-            }
-            else if (cpuAnswer == "2" && answer == "3")
-            {
-                Console.WriteLine("Scissors vs Paper");
-                pointPlayer(player, cpu);
-            }
-
-            else if (cpuAnswer == "3" && answer == "1")
-            {
-                Console.WriteLine("Rock vs Scissors");
-                pointPlayer(player, cpu);
-            }
-
-            else { Tie(player, cpu); }
+            if (answer == "1" && cpuAnswer == "2") { Console.WriteLine("Rock vs Paper"); pointCPU(player, cpu); }
+            else if (answer == "2" && cpuAnswer == "3") { Console.WriteLine("Paper vs Scissors"); pointCPU(player, cpu); }
+            else if (answer == "3" && cpuAnswer == "1") { Console.WriteLine("Scissors vs Rock"); pointCPU(player, cpu); }
+            else if (cpuAnswer == "1" && answer == "2") { Console.WriteLine("Paper vs Rock"); pointPlayer(player, cpu); }
+            else if (cpuAnswer == "2" && answer == "3") { Console.WriteLine("Scissors vs Paper"); pointPlayer(player, cpu); }
+            else if (cpuAnswer == "3" && answer == "1") { Console.WriteLine("Rock vs Scissors"); pointPlayer(player, cpu); }
+            else { Console.WriteLine("Tie!"); Tie(player, cpu); }
         }
         static string cpuThrow()
         {
