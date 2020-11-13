@@ -89,6 +89,11 @@ namespace RockPaperScissors
                     Console.WriteLine("Scissors vs Rock");
                     pointCPU(player, cpu);
                 }
+                else
+                {
+                    Console.WriteLine("Not a valid option...");
+                    RPS(player, cpu);
+                }
             }
         }
         static string cpuThrow()
