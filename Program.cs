@@ -19,13 +19,14 @@ namespace RockPaperScissors
             else
             {
                 Console.WriteLine($@"
-            ----------------------
-            | Player: {player} | CPU: {cpu} |
-            ----------------------
-            What would you like to throw?
-            1) Rock
-            2) Paper
-            3) Scissors
+----------------------
+| Player: {player} | CPU: {cpu} |
+----------------------
+What would you like to throw?
+1) Rock
+2) Paper
+3) Scissors
+First to 3 wins!
             ");
                 string answer = Console.ReadLine();
                 Throw(answer, player, cpu);
